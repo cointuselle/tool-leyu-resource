@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leyu · 简洁实用工具箱</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #fafaf9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            color: #232323;
+            line-height: 1.65;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0 1.5rem;
+        }
+        .page {
+            max-width: 680px;
+            width: 100%;
+            margin: 3rem 0 4rem 0;
+        }
+
+        /* 开场短句 – 留白与克制 */
+        .opening {
+            margin-bottom: 2.5rem;
+        }
+        .opening p {
+            font-size: 1.25rem;
+            font-weight: 380;
+            letter-spacing: 0.02em;
+            color: #1f1f1f;
+            border-left: 3px solid #c59d7a;
+            padding-left: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* 承接段落 – 站点介绍与可信说明 */
+        .context {
+            margin-bottom: 3rem;
+        }
+        .context p {
+            font-size: 1rem;
+            color: #3b3b3b;
+            margin-bottom: 1.25rem;
+        }
+        .context p:last-child {
+            margin-bottom: 0;
+        }
+        .context a {
+            color: #8b6f50;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: color 0.2s;
+        }
+        .context a:hover {
+            color: #b38763;
+        }
+
+        /* 特点列表 – 卡片式条目 */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+            margin: 3rem 0 2.8rem 0;
+        }
+        .feature-item {
+            background: #ffffff;
+            border: 1px solid #ebdfd3;
+            border-radius: 10px;
+            padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .feature-item:hover {
+            background: #fefcf9;
+            box-shadow: 0 2px 8px rgba(158, 127, 95, 0.06);
+        }
+        .feature-item h3 {
+            font-size: 1.05rem;
+            font-weight: 530;
+            letter-spacing: 0.01em;
+            color: #2d2d2d;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .feature-item h3 span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #dac0a8;
+            border-radius: 50%;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #4f4f4f;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* 温和结尾 – 小段落 + 自然链接 */
+        .closing {
+            margin-top: 1.2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e7ddd2;
+        }
+        .closing p {
+            font-size: 0.95rem;
+            color: #4a4a4a;
+            margin-bottom: 1rem;
+        }
+        .closing a {
+            color: #8b6f50;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: color 0.2s;
+        }
+        .closing a:hover {
+            color: #b38763;
+        }
+
+        /* 极简脚注 */
+        .footnote {
+            font-size: 0.8rem;
+            color: #8f8b85;
+            margin-top: 3.5rem;
+            letter-spacing: 0.01em;
+            text-align: center;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 500px) {
+            .page {
+                margin: 2rem 0 3rem 0;
+            }
+            .opening p {
+                font-size: 1.1rem;
+                padding-left: 1rem;
+            }
+            .feature-item {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="opening">
+        <p>在线工具常给人匆匆之感，但一个可靠的站点往往始于清晰的定位与稳定的质感。</p>
+    </div>
+
+    <div class="context">
+        <p>
+            <a href="https://tool-leyu.com.cn">leyu</a> 是一个面向日常效率与轻度处理需求的工具集合，不追求功能堆砌，而关注每个工具是否真正可用、简洁、无干扰。站点从上线之初便遵循“即用即走”的理念：无需注册，不收集多余信息，页面加载后即可操作。
+        </p>
+        <p>
+            在技术层面，所有处理均在浏览器本地完成，无后端中转，因此数据不会外传。无论是文本转换、格式清理还是编码辅助，每一次使用都在你掌控之中。这种设计既降低了隐私顾虑，也使得整个站点能够保持轻量和稳定。
+        </p>
+        <p>
+            经过持续迭代，目前 leyu 涵盖近二十项实用功能，覆盖文本处理、时间转换、编码解码、随机生成等常见场景。每项工具均经过可用性核查，并优先适配移动端与窄屏设备。
+        </p>
+    </div>
+
+    <div class="features">
+        <div class="feature-item">
+            <h3><span></span>即时响应，无冗余等待</h3>
+            <p>所有运算在页面内完成，无需请求外部服务器。输入内容后结果即时呈现，适合需要快速反馈的工作流。</p>
+        </div>
+        <div class="feature-item">
+            <h3><span></span>清晰的功能边界</h3>
+            <p>每个工具只解决一类问题，没有隐藏的附加项或诱导升级。界面上只保留必要操作区，降低认知负荷。</p>
+        </div>
+        <div class="feature-item">
+            <h3><span></span>离线友好，数据本地化</h3>
+            <p>采用前端静态架构，大部分功能在断网环境下依然可用。你的文本、代码或记录不会离开当前设备。</p>
+        </div>
+        <div class="feature-item">
+            <h3><span></span>持续维护，透明迭代</h3>
+            <p>站点更新日志公开，每次功能调整或修复均有记录。遇到问题可通过页面内渠道反馈，通常在一个工作日内回应。</p>
+        </div>
+    </div>
+
+    <div class="closing">
+        <p>
+            如果你正在寻找一个没有弹窗、没有侧边广告、也没有冗长注册流程的工具站，不妨从 <a href="https://tool-leyu.com.cn">leyu</a> 开始。这里保持着一份克制的实用主义——每一个功能页面都经过重新审视，确保它值得被放入收藏夹。
+        </p>
+        <p>
+            工具的意义不在于数量，而在于当你需要它时，它刚好在那里，并且足够简单。
+        </p>
+    </div>
+
+    <div class="footnote">
+        leyu · 自建工具集 · 持续完善中
+    </div>
+</div>
+</body>
+</html>
