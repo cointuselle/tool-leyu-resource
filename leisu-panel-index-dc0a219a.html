@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>稳定入口 · 雷速面板说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9f7f4;
+      font-family: system-ui, 'Segoe UI', 'Noto Sans SC', sans-serif;
+      color: #2e2a26;
+      line-height: 1.7;
+      padding: 2.5rem 1.2rem;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: rgba(255, 252, 248, 0.75);
+      backdrop-filter: blur(1px);
+      padding: 3rem 2.2rem;
+      border-radius: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 480;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: #1f1c18;
+      margin-bottom: 0.5rem;
+      border-left: 5px solid #c1964b;
+      padding-left: 1.2rem;
+    }
+
+    .byline {
+      font-size: 0.95rem;
+      color: #8a847d;
+      margin: 0.6rem 0 2rem 1.7rem;
+      font-style: normal;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: #3f3a33;
+      background: #efebe6;
+      padding: 1.2rem 1.8rem;
+      border-radius: 18px;
+      margin: 1.8rem 0 2.4rem 0;
+      line-height: 1.6;
+      border: 1px solid #dad3ca;
+    }
+
+    .lead strong {
+      font-weight: 550;
+      color: #1f1c18;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 420;
+      margin-top: 2.8rem;
+      margin-bottom: 0.8rem;
+      color: #312d27;
+      border-bottom: 1px solid #dfd8ce;
+      padding-bottom: 0.4rem;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+    }
+
+    .quote-block {
+      background: #f3efe8;
+      padding: 1.6rem 2rem;
+      border-radius: 20px;
+      margin: 2.2rem 0;
+      border-left: 5px solid #b88b44;
+      font-style: normal;
+      box-shadow: inset 0 0 0 1px #e2d9cc;
+    }
+
+    .quote-block cite {
+      display: block;
+      margin-top: 0.8rem;
+      font-style: normal;
+      font-size: 0.9rem;
+      color: #7a6f62;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 1.8rem;
+      margin: 2rem 0 1rem 0;
+    }
+
+    .info-item {
+      background: #fcfaf7;
+      border-radius: 16px;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid #e6ddd2;
+    }
+
+    .info-item h3 {
+      font-size: 1.05rem;
+      font-weight: 520;
+      color: #1f1c18;
+      margin-bottom: 0.3rem;
+    }
+
+    .info-item p {
+      font-size: 0.92rem;
+      color: #4f4840;
+      margin-bottom: 0;
+    }
+
+    .callout {
+      background: transparent;
+      border: 1px dashed #b3997a;
+      padding: 1.2rem 1.8rem;
+      border-radius: 18px;
+      margin: 2.4rem 0 1.2rem 0;
+      color: #363029;
+      font-size: 0.98rem;
+    }
+
+    .callout a {
+      color: #5c3e1a;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+
+    .callout a:hover {
+      color: #231c14;
+      background: #eae3d7;
+    }
+
+    .faq-summary {
+      margin: 2.4rem 0 0.8rem 0;
+    }
+
+    .faq-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid #e1d8cc;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 530;
+      color: #2f2a23;
+    }
+
+    .faq-a {
+      color: #534b41;
+      font-size: 0.94rem;
+      margin-top: 0.25rem;
+    }
+
+    .access-note {
+      margin-top: 3rem;
+      padding: 1.6rem 1.8rem;
+      background: #eae4db;
+      border-radius: 20px;
+      font-size: 0.96rem;
+      color: #2a241d;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .container {
+        padding: 1.8rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.7rem;
+        padding-left: 0.9rem;
+      }
+      .lead {
+        font-size: 1rem;
+        padding: 1rem 1.2rem;
+      }
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .quote-block {
+        padding: 1.2rem 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>稳定入口与面板说明</h1>
+    <div class="byline">一篇关于使用界面与访问路径的客观梳理</div>
+
+    <div class="lead">
+      <strong>雷速</strong> 提供一个聚合型面板页面，其核心价值在于将分散的信息节点整合为一致的操作界面。本文从稳定入口与页面结构两个角度，说明该面板的实际定位与使用逻辑。
+    </div>
+
+    <p>
+      面板类工具通常面临两个基础问题：入口是否可靠，以及页面信息是否清晰。我们关注的是，在常态化使用中，如何降低对临时地址的依赖，同时保持界面本身的功能密度。下面基于实际页面布局，描述其构成和适用场景。
+    </p>
+
+    <h2>页面结构概览</h2>
+    <p>
+      当前面板采用分区式布局，主要分为状态区、导航区和内容展示区。状态区集中显示连接状态与关键指标，不依赖第三方插件；导航区提供直达各功能模块的切换路径；内容展示区则根据所选模块动态更新，减少页面跳转带来的割裂感。
+    </p>
+
+    <div class="quote-block">
+      “面板的意义不在于提供多少入口，而在于每个入口都能稳定兑现其功能描述。”
+      <cite>—— 界面设计笔记，2025</cite>
+    </div>
+
+    <h2>几个值得关注的细节</h2>
+    <div class="info-grid">
+      <div class="info-item">
+        <h3>直连地址</h3>
+        <p>页面通过固定域名提供服务，无需每次使用时搜索或询问最新链接。可直接将 <a href="https://leisu-panel-rayspeed.com">雷速</a> 添加至浏览器书签栏。</p>
+      </div>
+      <div class="info-item">
+        <h3>信息密度</h3>
+        <p>首页以卡片和状态提示为主，无冗余装饰。常用操作保持在两次点击以内，避免菜单层级过深。</p>
+      </div>
+      <div class="info-item">
+        <h3>响应调整</h3>
+        <p>针对窄屏设备优化了排版与按钮尺寸，在手机和平板上的可读性接近桌面版，不会出现元素重叠或文字溢出。</p>
+      </div>
+      <div class="info-item">
+        <h3>轻量加载</h3>
+        <p>面板没有嵌入大体积脚本或外部字体，初次加载耗时控制在合理范围内，适合网络条件一般的环境。</p>
+      </div>
+    </div>
+
+    <h2>典型使用场景</h2>
+    <p>
+      对于需要快速确认面板状态或进行配置调整的用户，直接通过书签或输入域名进入 <a href="https://leisu-panel-rayspeed.com">雷速</a> 即可。首页顶部提供全局状态预览，无需登录或额外认证即可查看基本信息。如需修改设置，再根据页面引导进入对应模块。
+    </p>
+    <p>
+      另一个常见场景是作为参考页面：当需要向其他人说明面板布局或功能分区时，可直接分享该页面，对方打开后所见即所得，不存在版本不一致的问题。
+    </p>
+
+    <div class="callout">
+      ⚡ 提示：若遇到页面加载异常，可先检查本地网络连接，或尝试刷新一次。大部分临时中断与面板本身无关。长期使用建议将 <a href="https://leisu-panel-rayspeed.com">雷速</a> 固定为浏览器的启动页。
+    </div>
+
+    <h2>FAQ 摘要</h2>
+    <div class="faq-summary">
+      <div class="faq-item">
+        <div class="faq-q">Q：面板是否需要注册或付费？</div>
+        <div class="faq-a">A：当前面板为开放页面，注册或付费并非基础使用的前提条件，具体功能权限以页面显示为准。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q：域名是否会频繁变动？</div>
+        <div class="faq-a">A：此域名已稳定使用较长时间，短期内无变更计划。建议以官方书签为准，避免轻信第三方提供的替代地址。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q：面板支持哪些浏览器？</div>
+        <div class="faq-a">A：主流现代浏览器均可正常显示，包括 Chrome、Firefox、Edge、Safari 等，无需安装额外扩展。</div>
+      </div>
+    </div>
+
+    <div class="access-note">
+      ↳ 如需直接体验面板，可前往 <a href="https://leisu-panel-rayspeed.com">雷速</a> 页面。所有信息以实际界面为准，本文仅作结构化说明。
+    </div>
+  </div>
+</body>
+</html>
